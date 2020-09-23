@@ -6,9 +6,11 @@ import (
 	"net/http"
 )
 
+const token string = "" // Define token
+
 func main() {
 	client := http.Client{}
-	resp, err := client.Get("https://gmail.googleapis.com/gmail/v1/users/105818564067529236868/messages?access_token=ya29.a0AfH6SMD2aYuiofdBxPrvqET-OS0qLIS1As_WabwgvpUnaaSr4utU_VF_YQHIHaHs1wcuo6bU5fR1TX2dG0uD-aRe5EPYuFxn40ZT5kSm8smoEMRz4L2CESt91H_qyUTFOsiTVIXrUqP4G5ck7rgkQQ2e3OPWdHkgNP0")
+	resp, err := client.Get("https://gmail.googleapis.com/gmail/v1/users/105818564067529236868/messages?access_token=" + token)
 	if err != nil {
 		panic(err)
 	}
