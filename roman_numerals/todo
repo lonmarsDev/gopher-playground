@@ -1,0 +1,72 @@
+Roman Numerals:
+
+The Romans wrote numbers using letters : I, V, X, L, C, D, M. (notice these letters have lots of straight lines and are hence easy to hack into stone tablets)
+
+Part 1:
+
+The Kata says you should write a function to convert from normal numbers to Roman Numerals: eg
+
+     1 --> I
+     10 --> X
+     7 --> VII
+etc.
+
+There is no need to be able to convert numbers larger than about 3000. (The Romans themselves didn’t tend to go any higher)
+
+Reference numbers:
+I -> 1
+V -> 5
+X -> 10
+L -> 50
+C -> 100
+D -> 500
+M -> 1000
+
+
+
+
+Roman Numerals start
+Var number = input
+IF number less than 5
+   Loop number
+     print I
+    end Loop
+Else IF number less than 10
+    print V
+    Loop number-5
+    print I
+Else IF number less than 50
+    print L
+    Loop number-10
+    print I
+
+
+
+function Loop5(num)
+    if num equal 5
+        print V
+    else
+        loop num
+            print I
+    End If
+End Function
+
+function Loop10(num)
+    if num equal 10
+        print X
+    else
+        loop num
+            if num equal 5
+                call Loop5
+            End If
+    End If
+End Function
+
+
+
+
+Function TestLoop5(t Testing){
+  const num =5
+  expected := Loop5(num)
+
+}
