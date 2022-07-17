@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+// this is same as:
+// dig +short goole.com @localhost
 func main() {
 	r := &net.Resolver{
 		PreferGo: true,
